@@ -23,9 +23,9 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="py-20 bg-background">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl font-semibold text-neutral-900 mb-10 text-center">
+        <h2 className="text-3xl font-semibold text-foreground mb-10 text-center">
           What I Do
         </h2>
         <div className="grid gap-6 md:grid-cols-2">
@@ -37,7 +37,7 @@ export default function Services() {
               <h3 className="text-xl font-medium text-neutral-800 mb-2">
                 {service.title}
               </h3>
-              <p className="text-neutral-600">{service.description}</p>
+              <p className="text-muted-foreground">{service.description}</p>
             </div>
           ))}
         </div>

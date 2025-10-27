@@ -4,7 +4,7 @@ export default function BriefPage() {
   return (
     <>
       <SiteHeader />
-      <main className="py-16">
+      <main className="py-16 bg-background transition-colors duration-300">
         <article className="prose prose-neutral max-w-3xl mx-auto px-4 md:px-0">
           <h1>Creative Brief</h1>
           <p>

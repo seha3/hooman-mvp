@@ -33,7 +33,7 @@ export default function ProjectsPage() {
       <main className="min-h-[calc(100vh-56px)] py-16">
         <div className="max-w-6xl mx-auto px-4 md:px-8">
           <h1 className="text-3xl font-semibold tracking-tight mb-2">Projects</h1>
-          <p className="text-neutral-600 mb-6">
+          <p className="text-muted-foreground mb-6">
             {loading ? "Loading…" : `Showing ${filtered.length} project${filtered.length === 1 ? "" : "s"}`}
           </p>
 
@@ -50,7 +50,7 @@ export default function ProjectsPage() {
                   key={s}
                   onClick={() => setStatus(s)}
                   className={`px-3 py-1.5 rounded-md border ${
-                    status === s ? "bg-black text-white border-black" : "border-neutral-300 hover:bg-neutral-100"
+                    status === s ? "bg-black text-white border-black" : "border-neutral-300 hover:bg-muted"
                   }`}
                 >
                   {s}

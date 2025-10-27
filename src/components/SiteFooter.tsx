@@ -1,7 +1,7 @@
 export default function SiteFooter() {
   return (
-    <footer id="footer" className="py-8 border-t border-neutral-200 bg-white text-center">
-      <p className="text-sm text-neutral-600">
+    <footer id="footer" className="py-8 border-t border-neutral-200 bg-card text-center">
+      <p className="text-sm text-muted-foreground">
         © {new Date().getFullYear()} Silvia Herrera — Built for Hooman Studio test.
       </p>
     </footer>
