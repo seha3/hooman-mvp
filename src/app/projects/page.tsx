@@ -64,6 +64,9 @@ export default function ProjectsPage() {
               ? Array.from({ length: 6 }).map((_, i) => <ProjectCardSkeleton key={i} />)
               : filtered.map((p) => <ProjectCard key={p.id} p={p} />)}
           </div>
+          {filtered.length === 0 && (
+            <p className="text-sm text-muted-foreground mt-6">No projects match your filter.</p>
+          )}
         </div>
       </main>
     </>

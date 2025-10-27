@@ -8,7 +8,11 @@ export default function ProjectCard({ p }: { p: Project }) {
     "bg-muted text-neutral-700";
 
   return (
-    <article className="p-5 border border-neutral-200 rounded-xl bg-background shadow-sm hover:shadow-md transition">
+    <article
+        tabIndex={0}
+        className="p-5 border border-neutral-200 rounded-xl bg-background shadow-sm hover:shadow-md transition
+        focus-visible:ring-2 focus-visible:ring-ring/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background
+        focus-visible:transition focus-visible:duration-200">
       <div className="flex items-center justify-between mb-2">
         <h3 className="text-lg font-medium">{p.title}</h3>
         <span className={`px-2.5 py-1 rounded-full text-xs ${badge}`}>{p.status}</span>
