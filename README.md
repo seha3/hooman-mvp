@@ -3,7 +3,7 @@
 A personal portfolio built with **Next.js 14**, **TypeScript**, and **Tailwind CSS**, showcasing selected projects focused on frontend development, interaction, and sound design.
 
 ## 🚀 Live Demo
-👉 [https://your-deploy-url.vercel.app](https://your-deploy-url.vercel.app)
+👉 https://hooman-820y5ex13-seha3s-projects.vercel.app/
 
 ---
 
