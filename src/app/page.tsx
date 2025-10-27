@@ -12,7 +12,7 @@ export default function HomePage() {
         <Hero />
         <div className="h-px bg-linear-to-r from-transparent via-[oklch(var(--border))] to-transparent" />
         <Services />
-        <FeaturedProject />
+        <FeaturedProject slug="rick-and-morty-app" />
         <SiteFooter />
       </main>
     </>
