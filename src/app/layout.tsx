@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Providers } from "./providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,37 +18,25 @@ export const metadata: Metadata = {
   description: "Human-centred web experiences — MVP",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        {/* Aplica tema inicial antes de hidratar */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
 (function () {
   try {
     var t = localStorage.getItem('theme');
-    if (!t) {
-      t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    if (t === 'dark') document.documentElement.classList.add('dark');
+    if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.classList.toggle('dark', t === 'dark');
   } catch (e) {}
 })();
           `,
           }}
         />
-      </head>
-      <body
-        className={[
-          geistSans.variable,
-          geistMono.variable,
-          "min-h-screen bg-background text-foreground antialiased",
-          "transition-colors duration-300",
-        ].join(" ")}
-      >
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

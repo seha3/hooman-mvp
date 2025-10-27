@@ -1,3 +1,5 @@
+import { Button } from "@/components/Button";
+
 export default function Hero() {
   return (
     <section
@@ -10,33 +12,30 @@ export default function Hero() {
       }}
     >
       <div className="max-w-5xl mx-auto px-6">
-        <h1 className="text-5xl font-bold tracking-tight text-foreground dark:drop-shadow-[0_0_15px_rgba(255,255,255,0.05)]">
+        <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-foreground leading-tight dark:drop-shadow-[0_0_20px_rgba(255,255,255,0.06)]">
           Human-centred web experiences.
         </h1>
-        <p className="mt-5 text-lg text-muted-foreground max-w-2xl mx-auto">
+
+        <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
           A tiny showcase of modern frontend craft with Next.js, TypeScript, and Tailwind.
         </p>
 
-        <div className="mt-8 flex items-center justify-center gap-3">
-          <a
-            href="/projects"
-            className="inline-flex items-center justify-center rounded-lg px-5 py-2.5 text-sm font-medium
-                       bg-primary text-primary-foreground shadow-sm hover:brightness-110
-                       focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/60 transition"
-          >
+        <div className="mt-10 flex items-center justify-center gap-4 flex-wrap">
+          <Button href="/projects" className="px-6 py-3 text-sm">
             View Projects
-          </a>
+          </Button>
 
-          <a
+          <Button
             href="/brief"
-            className="inline-flex items-center justify-center px-px py-px rounded-lg
-                       bg-linear-to-r from-[oklch(var(--primary))] via-[oklch(var(--ring))] to-[oklch(var(--primary))]
-                       hover:brightness-110 transition"
+            variant="outline"
+            className="relative px-6 py-3 text-sm overflow-hidden"
           >
-            <span className="px-4 py-2.5 rounded-[calc(var(--radius)+2px)] bg-background text-foreground">
-              Read the Brief
-            </span>
-          </a>
+            <span className="relative z-10">Read the Brief</span>
+            <span
+              className="absolute inset-0 bg-linear-to-r from-[oklch(var(--primary))] via-[oklch(var(--ring))] to-[oklch(var(--primary))]
+                         opacity-25 mix-blend-overlay"
+            />
+          </Button>
         </div>
       </div>
     </section>

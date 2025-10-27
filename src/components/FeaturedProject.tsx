@@ -9,7 +9,6 @@ export default function FeaturedProject({ slug }: { slug: string }) {
   return (
     <section className="py-16 md:py-20">
       <div className="max-w-6xl mx-auto px-6 md:px-8">
-        {/* Header: texto y CTAs apilados en mobile; en dos columnas desde md */}
         <header className="mb-6 grid gap-4 md:grid-cols-[1fr,auto] md:items-end">
           <div>
             <p className="text-xs px-2 py-1 rounded bg-muted inline-block mb-2">Featured</p>
@@ -21,7 +20,6 @@ export default function FeaturedProject({ slug }: { slug: string }) {
             </p>
           </div>
 
-          {/* CTAs: full-width y apiladas en mobile; fila desde sm */}
           <div className="flex flex-col sm:flex-row gap-2 sm:justify-end">
             <Link
               href={`/projects/${p.slug}`}
@@ -60,7 +58,6 @@ export default function FeaturedProject({ slug }: { slug: string }) {
           </div>
         </header>
 
-        {/* Preview responsive: contenedor 16:9 para evitar saltos; iframe > imagen > placeholder */}
         <div className="rounded-xl border border-border bg-card shadow-sm overflow-hidden">
           {p.demoUrl ? (
             <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
