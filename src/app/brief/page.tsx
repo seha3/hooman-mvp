@@ -1,4 +1,3 @@
-// src/app/brief/page.tsx
 import SiteHeader from "@/components/SiteHeader";
 import Link from "next/link";
 import { CheckCircle2, AlertTriangle, Clock, Gauge, Workflow, Blocks, ExternalLink } from "lucide-react";
@@ -116,21 +115,20 @@ export default function BriefPage() {
           {/* Links */}
           <footer className="mt-8 flex flex-wrap items-center gap-3">
             <Link
-              href="/projects"
-              className="inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium
-                         border border-border bg-card hover:bg-accent/10 transition
-                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/60"
+                href="/projects"
+                className="inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium 
+                        border border-border bg-card hover:bg-accent/10 transition"
             >
-              <ExternalLink className="h-4 w-4" />
-              View Projects
-                <Link
+                <ExternalLink className="h-4 w-4" />
+                View Projects
+            </Link>
+
+            <Link
                 href="/"
-                className="inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium
-                            bg-primary text-primary-foreground hover:brightness-110 transition
-                            focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/60"
-                >
-                Back to Home
-                </Link>
+                className="inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium 
+                        bg-primary text-primary-foreground hover:brightness-110 transition"
+            >
+                Home
             </Link>
           </footer>
         </article>
